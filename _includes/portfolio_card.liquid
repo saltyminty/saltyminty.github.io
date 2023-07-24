@@ -1,0 +1,15 @@
+{% comment %}Content-owned card: native theme styling with project dates and course summaries.{% endcomment %}
+<div class="col">
+  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+    <div class="card h-100 hoverable">
+      {% if project.img %}
+        {% include figure.liquid loading="lazy" path=project.img sizes="(min-width: 768px) 250px, 90vw" alt=project.title class="card-img-top" %}
+      {% endif %}
+      <div class="card-body">
+        <h3 class="card-title">{{ project.card_title | default: project.title }}</h3>
+        {% if project.date_label %}<p class="text-muted small">{{ project.date_label }}</p>{% endif %}
+        <p class="card-text">{{ project.description }}</p>
+      </div>
+    </div>
+  </a>
+</div>

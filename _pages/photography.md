@@ -1,0 +1,76 @@
+---
+layout: page
+title: Photography
+permalink: /photo/
+description: Photography and Video. This section is currently under construction.
+nav: true
+nav_order: 5
+display_categories: [Wushu, Landscape, Misc - Under Construction]
+# display_categories: [HKN, Wushu, Personal, Idk]
+horizontal: false
+---
+
+Shot on Canon EOS R
+
+<div class="text-left">
+  <img src="/assets/img/photography/IMG_9402.JPG" class="mx-auto d-block img-fluid rounded z-depth-0.5" alt="Left Image" style="width: 50%;">
+</div>
+
+
+<!-- pages/projects.md -->
+<div class="projects">
+{%- if site.enable_project_categories and page.display_categories %}
+  <!-- Display categorized projects -->
+  {%- for category in page.display_categories %}
+  <h2 class="font-weight-medium mt-4">{{ category }}</h2>
+  {%- assign categorized_projects = site.photography | where: "category", category -%}
+  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
+  <!-- Generate cards for each project -->
+  {% if page.horizontal -%}
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+    {%- for project in sorted_projects -%}
+      {% include projects_horizontal.liquid %}
+    {%- endfor %}
+    </div>
+  </div>
+  {%- else -%}
+  <div class="row row-cols-1 {% if category == 'Wushu' %}row-cols-md-2{% else %}row-cols-md-3{% endif %}">
+    {%- for project in sorted_projects -%}
+      {% include projects.liquid %}
+    {%- endfor %}
+  </div>
+  {%- endif -%}
+  {% endfor %}
+
+{%- else -%}
+<!-- Display projects without categories -->
+  {%- assign sorted_projects = site.photography | sort: "importance" -%}
+  <!-- Generate cards for each project -->
+  {% if page.horizontal -%}
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+    {%- for project in sorted_projects -%}
+      {% include projects_horizontal.liquid %}
+    {%- endfor %}
+    </div>
+  </div>
+  {%- else -%}
+  <div class="row row-cols-1 row-cols-md-3">
+    {%- for project in sorted_projects -%}
+      {% include projects.liquid %}
+    {%- endfor %}
+  </div>
+  {%- endif -%}
+{%- endif -%}
+</div>
+
+<br><br>
+Additionally, some videos I've worked on:
+- Every semester, HKN produces a CM (Candidate Meeting) Video, an informal music/dance video to introduce the club to newly invited candidates.
+  - [Spring 2024 CM Video](https://youtu.be/8D25xfglmWc?si=jFwJ7R6BFgQnhKFn)
+  - [Spring 2022 CM Video](https://youtu.be/hIZF-3YH6Is?si=ejSHUdzVUsmZlibT)
+- At the end of every semester, HKN produces a Banquet Video to showcase the club's semester, events, and members.
+  - [Spring 2022 Banquet Video](https://youtu.be/x9nWwW2Gmio?si=_dk0cU2XoSpBf9yH)
+  - [Spring 2024 Banquet Video](https://youtu.be/VCjesyACUns?si=fsIp6uMxwAcX55nT)
+- [EECS 16B Lab Video](https://youtu.be/tnO_SFtI5A8)

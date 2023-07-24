@@ -1,0 +1,10 @@
+---
+layout: page
+title: Gradient Domain Fusion
+description: Seamlessly combining images with Poisson blending.
+date_label: December 2022
+img: assets/img/fusion.png
+redirect: https://inst.eecs.berkeley.edu/~cs194-26/fa22/upload/files/projFinalAssigned/cs194-26-aar/#1
+importance: 1
+category: CS 194-26&#58; Computational Photography & Computer Vision
+---

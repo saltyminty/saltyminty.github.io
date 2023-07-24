@@ -1,3 +1,5 @@
-_site/
-.git/
-assets/
+.git
+.bundle
+vendor
+_site
+assets

@@ -1,97 +1,171 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
-
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+# Updated 2026-11-12 from Full and Google AI2 resumes and user-confirmed corrections.
+cv:
+  sections:
+    Education:
+    - institution: Stanford University
+      studyType: M.S. in Computer Science (HCP)
+      start_date: '2024'
+      end_date: Present
+      highlights:
+      - 'GPA: 3.935'
+    - institution: University of California, Berkeley
+      studyType: B.S. Electrical Engineering and Computer Science
+      start_date: '2020'
+      end_date: '2024'
+      highlights:
+      - Minor in Bioengineering
+      - 'Overall GPA: 3.89; Major GPA: 3.93'
+      - Certificate in Design Innovation
+    - institution: ''
+      studyType: <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/8MS9LNXMEA7F">Google
+        Project Management Certificate</a>
+      highlights: []
+      date: '2022'
+    Skills:
+    - name: Preferred programming languages
+      keywords:
+      - Python
+      - C++
+    - name: Other programming languages
+      keywords:
+      - C
+      - Java
+      - Rust
+      - Go
+      - SQL
+      - TypeScript
+    - name: GPU and deep learning
+      keywords:
+      - CUDA
+      - CuTe DSL
+      - cuDNN
+      - FlashInfer
+    - name: Build tools
+      keywords:
+      - Bazel
+    Experience:
+    - company: NVIDIA
+      position: Software Engineer - cuDNN/FlashInfer
+      location: Santa Clara, CA
+      start_date: 2024-08
+      end_date: Present
+      highlights:
+      - Architected cuDNN’s open-source fused GEMM and attention framework for Transformer Engine and MLPerf.
+      - Designed FlashInfer’s unified MLA API with modular backends, shared validation, autotuning, and workload-aware dispatch;
+        up to 5.75× faster than prior API routing on benchmarked workloads.
+      - Optimized and debugged CUDA/CuTe DSL attention, speculative-decoding, and GEMM execution across memory access, workload
+        balancing, FP8 numerics, compilation, dispatch, and launch overhead.
+      - 'FlashInfer attention codeowner: worked with customers and framework teams to prioritize features and fixes, coordinated
+        contributors and cross-team fixes, and reviewed 243 PRs over eight months.'
+      - Built and shared an asynchronous agent workspace for parallel debugging, testing, and review, with task tracking,
+        code editing, persistent context, test evidence, and review follow-ups.
+    - company: SpaceX
+      position: Software Engineering Intern - Starlink Backhaul
+      location: Redmond, WA
+      date: Summer 2023
+      highlights:
+      - Designed custom DHCP Option 82 to enable node self-ID, reducing wire dependency and satellite mass
+      - Automated satellite telemetry activation during orbital pass, mitigating CPU overruns from excessive data
+    - company: Amazon
+      position: SDE Intern - Device Computer Vision
+      location: Sunnyvale, CA
+      date: Summer 2022
+      highlights:
+      - Created unified, queryable database system utilizing AWS + Redash to enable quicker/more efficient queries
+    - company: Rivian
+      position: Software Engineering Intern - Infotainment and Connectivity Automation
+      location: Palo Alto, CA
+      date: Summer 2021
+      highlights:
+      - Developed essential custom test automation libraries (Python) for over 500 critical notifications and telltales
+    Honors and Awards:
+    - title: EECS Outstanding TA Award
+      awarder: University of California, Berkeley
+      date: 2024–2025
+      summary: One of seven departmental recipients
+      url: https://www2.eecs.berkeley.edu/Students/Awards/13/
+    - title: EECS Outstanding Graduate Student Instructor Award
+      awarder: University of California, Berkeley
+      date: 2023–2024
+      summary: Awarded to approximately 10% of GSIs, recognizing exceptional teaching, mentoring, and contributions to education.
+      url: https://gsi.berkeley.edu/ogsi-recipients-2023-2024/
+    Teaching:
+    - bullet: |-
+        **TA — CS 184: Computer Graphics and Imaging**<br>
+        UC Berkeley — January–May 2024
+        <ul>
+        <li>Taught OpenGL programming, geometric modeling, rendering techniques, and computer animation.</li>
+        </ul>
+    - bullet: |-
+        **Lab TA — EECS 106A: Introduction to Robotics**<br>
+        UC Berkeley — August–December 2023
+        <ul>
+        <li>Taught linear algebra and robotics principles using Turtlebot 3, Rethink Sawyer robots, and ROS 2.</li>
+        </ul>
+    - bullet: |-
+        **Head Lab TA — EECS 16B: Designing Information Devices and Systems II**<br>
+        UC Berkeley — August 2021–May 2023
+        <ul>
+        <li>Taught linear algebra and robotics concepts through a voice-controlled robot car.</li>
+        <li>Managed 30+ staff, logistics, course content, grading, and automation for a class of 1,100 students.</li>
+        <li>Developed automated systems for sign-ups, grading, logistics, and extensions.</li>
+        <li>Led a six-person team through redesign, implementation, testing, and release of lab software and curriculum for new Arduino hardware.</li>
+        </ul>
+    Projects:
+    - name: Project portfolio
+      url: /projects/
+      summary: Computer graphics, computational photography, and robotics projects, with detailed writeups. See also my [teaching
+        projects](/teaching/).
+    - name: Alpaca Benro Polaris
+      url: https://github.com/ogecko/alpaca-benro-polaris
+      date: 2024-09
+      summary: Open-source contributor. Enabled an HTTP-based REST API for the Benro Polaris tripod head, enhancing its functionality
+        for astrophotography.
+    - name: Satellite imagery anomaly detection — Planet
+      date: 2021–2022
+      summary: Created a fire-imagery database and used Google Earth Engine and a TensorFlow CNN for early-stage forest fire
+        classification and detection.
+    - name: Phased antenna solutions — bluShift Aerospace
+      date: '2021'
+      summary: Analyzed feasibility and proposed phased-array antenna solutions for communicating rocket telemetry.
+    - name: Water Bears — TAFLab, Berkeley
+      date: '2021'
+      summary: Electrical/programming lead on a 20+ person team collaborating with NASA on a long-range search-and-rescue
+        vehicle. Designed compact electrical systems for autonomous beacon tracking.
+    Extracurriculars:
+    - bullet: |-
+        **HKN (Eta Kappa Nu) — Department Relations**<br>
+        Spring 2024
+        <ul>
+        <li>Represented students in meetings with the EECS Department Chair on policies, courses, and resources.</li>
+        <li>Organized the EECS Undergraduate Town Hall for direct discussion between students and faculty.</li>
+        <li>Distributed, analyzed, and presented the EECS Undergraduate Survey, providing actionable insights to faculty.</li>
+        </ul>
+    - bullet: |-
+        **HKN (Eta Kappa Nu) — Industrial Relations Officer / Bridge AO**<br>
+        May 2021–Fall 2023
+        <ul>
+        <li>EECS honors society consisting of the top third of seniors and top quarter of juniors at Berkeley.</li>
+        <li>Organized industry opportunities and events, including information sessions and career fairs, for Berkeley students.</li>
+        <li>Directed, recorded, and edited videos for internal events and external marketing.</li>
+        </ul>
+    - bullet: |-
+        **Cal Wushu — Public Relations Chair**<br>
+        August–December 2022
+    - bullet: |-
+        **Computer Science Undergraduate Association — Officer**<br>
+        August 2021–May 2024
+    - bullet: |-
+        **Combat Robotics at Berkeley — EECS Subteam**<br>
+        2021–2023
+        <ul>
+        <li>Designed, wired, and tested electrical systems for a 250-pound battlebot.</li>
+        <li>Designed and programmed a reactive LED system using controller input and IMU data.</li>
+        </ul>
+    - bullet: |-
+        **New Space Entrepreneurship — Course Instructor / Project Manager**<br>
+        February 2021–May 2022
+        <ul>
+        <li>Led projects with space startups, including Spacept, Virtus Solis, and Orbit Fab.</li>
+        <li>Organized outreach and professional development events for the emerging space industry.</li>
+        </ul>
