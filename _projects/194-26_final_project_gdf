@@ -1,0 +1,9 @@
+---
+layout: page
+title: Gradient Domain Fusion
+description: Blending images via Poisson blending in the gradient domain
+img: assets/img/fusion.png
+redirect: https://inst.eecs.berkeley.edu/~cs194-26/fa22/upload/files/projFinalAssigned/cs194-26-aar/#1
+importance: 1
+category: CS 194-26&#58; Computational Photography & Computer Vision
+---
