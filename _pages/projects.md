@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A collection of class and personal projects.
 nav: true
-nav_order: 2
-display_categories: [work, fun]
+nav_order: 3
+display_categories: [CS 184&#58; Computer Graphics, CS 194-26&#58; Computational Photography & Computer Vision, EECS 106A&#58; Robotics, EECS 16B&#58; Designing Information Devices and Systems II]
 horizontal: false
 ---
 
