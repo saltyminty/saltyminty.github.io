@@ -1,1 +1,1 @@
-Generated from [al-folio](https://github.com/alshedivat/al-folio)
+Generated from [al-folio](https://github.com/alshedivat/al-folio) template.
