@@ -163,7 +163,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ['_pages']
+include: ['_pages', '.well-known']
 exclude:
   - bin
   - Gemfile
@@ -198,6 +198,12 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ".well-known"
+    values:
+      sitemap: false
+      layout: none
+      permalink: /:path/:basename:output_ext
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
